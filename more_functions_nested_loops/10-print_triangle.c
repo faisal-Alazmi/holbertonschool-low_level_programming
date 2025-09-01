@@ -17,6 +17,6 @@ for (sp = size - row; sp > 0; sp--)
 _putchar(' ');
 for (hash = 0; hash < row; hash++)
 _putchar('#');
-_putchar('\n');	
+_putchar('\n');
 }
 }
