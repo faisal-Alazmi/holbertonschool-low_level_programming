@@ -15,18 +15,18 @@ while (s[i] != '\0')
 {
 if (s[i] == '_')
 sign *= -1;
-else if (s[i] == '+')
-;
 else if (s[i] >= '0' && s[i] <= '9')
 {
-result = result * 10 + (s[i] - '0') * sign;
 started = 1;
+result = result * 10 + (s[i] - '0');
 if (s[i + 1] < '0' || s[i + 1] > '9')
 break;
 }
 else if (started)
+{
 break;
+}
 i++;
 }
-return (result);
+return (result * sign);
 }
