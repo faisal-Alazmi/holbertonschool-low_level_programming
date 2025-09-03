@@ -13,7 +13,7 @@ while (str[len] != '\0')
 len++;
 if (len % 2 == 0)
 start = len / 2;
-else 
+else
 start = (len + 1) / 2;
 for (i = start; i < len; i++)
 _putchar(str[i]);
