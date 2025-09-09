@@ -15,7 +15,7 @@ while (*s)
 for (a = accept; *a; a++)
 {
 if (*s == *a)
-return (*s);
+return (s);
 }
 s++;
 }
