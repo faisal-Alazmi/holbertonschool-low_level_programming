@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include "3-calc.h"
 /**
- * main - performs simple operations
- * @argc: number of arguments
- * @argv: array of arguments
+ * main - performs simple arithmetic from CLI arguments
+ * @argc: argument count
+ * @argv: argument vector
  *
- * Return: Always 0
+ * Return: 0 on success, exits with 98/99/100 on specific errors
  */
 int main(int argc, char *argv[])
 {
