@@ -1,18 +1,31 @@
 #include "lists.h"
 #include <stdlib.h>
 
-/* Helpers (محلية داخل هذا الملف فقط) */
+/**
+ * _strlen_local - Computes the length of a C string.
+ * @s: Pointer to a null-terminated string.
+ *
+ * Return: Length in bytes (0 if @s is NULL).
+ */
 static size_t _strlen_local(const char *s)
 {
 	size_t len = 0;
 
 	if (!s)
 		return (0);
+
 	while (s[len])
 		len++;
+
 	return (len);
 }
 
+/**
+ * _strdup_local - Duplicates a C string using malloc (no strdup).
+ * @s: Pointer to the source null-terminated string.
+ *
+ * Return: Pointer to newly allocated copy, or NULL on failure/if @s is NULL.
+ */
 static char *_strdup_local(const char *s)
 {
 	size_t i, len;
@@ -29,12 +42,13 @@ static char *_strdup_local(const char *s)
 	for (i = 0; i < len; i++)
 		p[i] = s[i];
 	p[len] = '\0';
+
 	return (p);
 }
 
 /**
  * add_node - Adds a new node at the beginning of a list_t list.
- * @head: Address of the pointer to the head node.
+ * @head: Address of pointer to head node.
  * @str:  String to duplicate into the new node.
  *
  * Return: Address of the new element, or NULL if it failed.
